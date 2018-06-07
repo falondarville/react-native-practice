@@ -36,6 +36,20 @@ class DetailsScreen extends React.Component {
   }
 }
 
+class ModalScreen extends React.Component {
+  render() {
+    return (
+      <View>
+        <Text>I'm a real role modal</Text>
+        <Button
+          onPress={() => this.props.navigation.goBack()}
+          title="Dismiss"
+        />
+      </View>
+    )
+  }
+}
+
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
@@ -51,13 +65,6 @@ const RootStack = createStackNavigator(
       headerTitleStyle: {
         fontWeight: "bold"
       },
-      headerRight: (
-        <Button 
-        onPress={() => alert('This is a button')}
-        title="info"
-        color="#fff"
-        />
-      ),
     },
   }
 );
