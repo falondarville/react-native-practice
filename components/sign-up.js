@@ -21,7 +21,9 @@ const options = {
 			error: 'Please enter a valid email.'
 		},
 		password: {
-			error: "Passwords must be a min. of 6 characters."
+			error: "Passwords must be a min. of 6 characters.",
+			password: true,
+			secureTextEntry: true
 		}
 	}
 }
@@ -44,8 +46,8 @@ export default class Signup extends React.Component {
 				/>
 
 				<LinearGradient
-	          colors={['#134E5E', '#71B280']}
-	          style={{ padding: 8, alignItems: 'center', borderRadius: 4 }}
+	          colors={[ '#841584', '#134E5E']}
+	          style={{ padding: 8, alignItems: 'center', borderRadius: 2 }}
 	          start={[ 0.0, 0.5 ]} end={[ 1.0, 0.5 ]} locations={[ 0.0, 1.0 ]}>				
 				<TouchableOpacity accessibilityLabel="Click to submit the sign up form" style={styles.button} onPress={this.handleSubmit}>
 					<Text style={styles.buttonText}>Let's go</Text>
