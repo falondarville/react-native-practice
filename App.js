@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import { createStackNavigator, navigationOptions } from 'react-navigation';
 import SignupScreen from './components/sign-up.js';
+import DetailsScreen from './components/details.js';
 
 // if you want to push unique information to each new screen, use push instead of navigate
 // the header provided with include a back button by default if there is something to go back to. But you can also programmatically add this functionality by adding this.props.navigation.goBack()
@@ -13,43 +14,17 @@ import SignupScreen from './components/sign-up.js';
 // to use params in the title, make navigationOptions into a function. Props won't work here because this is not available
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: "Falon's App"
+    title: "The Unwelcome Portal"
   };
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome to my app!</Text>
-        <Button title="Go to details" onPress={() => this.props.navigation.navigate('Details')} />
+        <Image source={{uri: 'https://falondarville.com/wp-content/themes/falon-darville/assets/images/3.png'}} style={{ width: 300, height: 300 }}/>
+        <Button title="Read the Synopsis" onPress={() => this.props.navigation.navigate('Details')} />
         <Button title="Sign up now" onPress={() => this.props.navigation.navigate('Signup')} />
       </View>
   );
 }
-}
-
-class DetailsScreen extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>This is the detail page!</Text>
-        <Button title="Go home" onPress={() => this.props.navigation.navigate('Home')}/>
-        <Button title="Go Back" onPress={() => this.props.navigation.goBack()}/>
-      </View>
-    );
-  }
-}
-
-class ModalScreen extends React.Component {
-  render() {
-    return (
-      <View>
-        <Text>I'm a real role modal</Text>
-        <Button
-          onPress={() => this.props.navigation.goBack()}
-          title="Dismiss"
-        />
-      </View>
-    )
-  }
 }
 
 const RootStack = createStackNavigator(

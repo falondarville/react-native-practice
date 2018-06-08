@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Button, StyleSheet, TouchableHighlight } from 'react-native';
+import { Text, View, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import t from 'tcomb-form-native';
 import { LinearGradient } from 'expo';
 
@@ -45,11 +45,11 @@ export default class Signup extends React.Component {
 
 				<LinearGradient
 	          colors={['#134E5E', '#71B280']}
-	          style={{ padding: 8, alignItems: 'center', borderRadius: 5 }}
-	          start={[ 0.3, 0.2 ]}>				
-				<TouchableHighlight style={styles.button} onPress={this.handleSubmit}>
+	          style={{ padding: 8, alignItems: 'center', borderRadius: 4 }}
+	          start={[ 0.0, 0.5 ]} end={[ 1.0, 0.5 ]} locations={[ 0.0, 1.0 ]}>				
+				<TouchableOpacity style={styles.button} onPress={this.handleSubmit}>
 					<Text style={styles.buttonText}>Let's Go</Text>
-				</TouchableHighlight>
+				</TouchableOpacity>
 				</LinearGradient>
 			</View>
 		);
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
+    marginTop: 6,
     color: 'white',
     alignSelf: 'center'
   },
