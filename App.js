@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { createStackNavigator, navigationOptions } from 'react-navigation';
+import SignupScreen from './components/sign-up.js';
 
 // if you want to push unique information to each new screen, use push instead of navigate
 // the header provided with include a back button by default if there is something to go back to. But you can also programmatically add this functionality by adding this.props.navigation.goBack()
@@ -19,6 +20,7 @@ class HomeScreen extends React.Component {
       <View style={styles.container}>
         <Text>Welcome to my app!</Text>
         <Button title="Go to details" onPress={() => this.props.navigation.navigate('Details')} />
+        <Button title="Go to sign-up" onPress={() => this.props.navigation.navigate('Signup')} />
       </View>
   );
 }
@@ -53,7 +55,8 @@ class ModalScreen extends React.Component {
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
-    Details: DetailsScreen
+    Details: DetailsScreen,
+    Signup: SignupScreen
   },
   {
     initialRouteName: 'Home',
