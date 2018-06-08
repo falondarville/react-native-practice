@@ -13,15 +13,13 @@ import DetailsScreen from './components/details.js';
 // yes you can directly access the params object with this.props.navigation.state.params, but use one of the other two methods to account for the possibility of null
 // to use params in the title, make navigationOptions into a function. Props won't work here because this is not available
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: "The Unwelcome Portal"
-  };
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.text}>The official app for the never-heard-of book series by Falon Darville.</Text>
         <Image source={{uri: 'https://falondarville.com/wp-content/themes/falon-darville/assets/images/3.png'}} style={{ width: 300, height: 300 }}/>
-        <Button title="Read the Synopsis" onPress={() => this.props.navigation.navigate('Details')} />
-        <Button title="Sign up now" onPress={() => this.props.navigation.navigate('Signup')} />
+        <Button accessibilityLabel="Click to read the book synopsis" color="#841584" title="Read the Synopsis" onPress={() => this.props.navigation.navigate('Details')} />
+        <Button accessibilityLabel="Click to sign up" color="#841584" title="Start Exploring Now" onPress={() => this.props.navigation.navigate('Signup')} />
       </View>
   );
 }
@@ -54,6 +52,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    marginTop: 40,
+    fontSize: 18,
+    padding: 20
+  }
 });
 
 export default class App extends React.Component {

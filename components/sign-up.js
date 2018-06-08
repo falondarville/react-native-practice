@@ -47,7 +47,7 @@ export default class Signup extends React.Component {
 	          colors={['#134E5E', '#71B280']}
 	          style={{ padding: 8, alignItems: 'center', borderRadius: 4 }}
 	          start={[ 0.0, 0.5 ]} end={[ 1.0, 0.5 ]} locations={[ 0.0, 1.0 ]}>				
-				<TouchableOpacity style={styles.button} onPress={this.handleSubmit}>
+				<TouchableOpacity accessibilityLabel="Click to submit the sign up form" style={styles.button} onPress={this.handleSubmit}>
 					<Text style={styles.buttonText}>Let's Go</Text>
 				</TouchableOpacity>
 				</LinearGradient>
