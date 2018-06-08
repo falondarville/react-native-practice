@@ -20,7 +20,7 @@ class HomeScreen extends React.Component {
       <View style={styles.container}>
         <Text>Welcome to my app!</Text>
         <Button title="Go to details" onPress={() => this.props.navigation.navigate('Details')} />
-        <Button title="Go to sign-up" onPress={() => this.props.navigation.navigate('Signup')} />
+        <Button title="Sign up now" onPress={() => this.props.navigation.navigate('Signup')} />
       </View>
   );
 }
@@ -62,9 +62,9 @@ const RootStack = createStackNavigator(
     initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#7fffa9"
+        backgroundColor: "#134E5E"
       },
-      headerTintColor: "#43464b",
+      headerTintColor: "white",
       headerTitleStyle: {
         fontWeight: "bold"
       },
