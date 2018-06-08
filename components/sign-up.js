@@ -48,7 +48,7 @@ export default class Signup extends React.Component {
 	          style={{ padding: 8, alignItems: 'center', borderRadius: 4 }}
 	          start={[ 0.0, 0.5 ]} end={[ 1.0, 0.5 ]} locations={[ 0.0, 1.0 ]}>				
 				<TouchableOpacity accessibilityLabel="Click to submit the sign up form" style={styles.button} onPress={this.handleSubmit}>
-					<Text style={styles.buttonText}>Let's Go</Text>
+					<Text style={styles.buttonText}>Let's go</Text>
 				</TouchableOpacity>
 				</LinearGradient>
 			</View>

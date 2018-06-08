@@ -16,10 +16,12 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>The official app for the never-heard-of book series by Falon Darville.</Text>
-        <Image source={{uri: 'https://falondarville.com/wp-content/themes/falon-darville/assets/images/3.png'}} style={{ width: 300, height: 300 }}/>
-        <Button accessibilityLabel="Click to read the book synopsis" color="#841584" title="Read the Synopsis" onPress={() => this.props.navigation.navigate('Details')} />
+        <Text style={styles.header}>The Unwelcome Portal</Text>
         <Button accessibilityLabel="Click to sign up" color="#841584" title="Start Exploring Now" onPress={() => this.props.navigation.navigate('Signup')} />
+        <Image source={{uri: 'https://falondarville.com/wp-content/themes/falon-darville/assets/images/3.png'}} style={{ width: 300, height: 300 }}/>
+        
+        <Text style={styles.text}>The official app for the never-heard-of book series by Falon Darville.</Text>
+        <Button accessibilityLabel="Click to read the book synopsis" color="#841584" title="Read the Synopsis" onPress={() => this.props.navigation.navigate('Details')} />
       </View>
   );
 }
@@ -35,9 +37,9 @@ const RootStack = createStackNavigator(
     initialRouteName: 'Home',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#134E5E"
+        backgroundColor: "#fff"
       },
-      headerTintColor: "white",
+      headerTintColor: "black",
       headerTitleStyle: {
         fontWeight: "bold"
       },
@@ -54,8 +56,11 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 40,
-    fontSize: 18,
-    padding: 20
+    fontSize: 14,
+    padding: 30
+  },
+  header: {
+    fontSize: 30
   }
 });
 
