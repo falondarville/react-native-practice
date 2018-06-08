@@ -45,7 +45,8 @@ export default class Signup extends React.Component {
 
 				<LinearGradient
 	          colors={['#134E5E', '#71B280']}
-	          style={{ padding: 8, alignItems: 'center', borderRadius: 5 }}>				
+	          style={{ padding: 8, alignItems: 'center', borderRadius: 5 }}
+	          start={[ 0.3, 0.2 ]}>				
 				<TouchableHighlight style={styles.button} onPress={this.handleSubmit}>
 					<Text style={styles.buttonText}>Let's Go</Text>
 				</TouchableHighlight>
