@@ -18,12 +18,18 @@ const options = {
 			label: 'Agree to Terms'
 		},
 		email: {
-			error: 'Please enter a valid email.'
+			error: 'Please enter a valid email.',
+			placeholder: 'Your email'
+		},
+		username: {
+			placeholder: 'Optional username'
 		},
 		password: {
 			error: "Passwords must be a min. of 6 characters.",
 			password: true,
-			secureTextEntry: true
+			secureTextEntry: true,
+			placeholder: 'Your password',
+			help: 'Passwords should be a min. of 6 characters.'
 		}
 	}
 }
